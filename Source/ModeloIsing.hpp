@@ -17,6 +17,8 @@ namespace Bidimensional {
     float energiaRede(RedeSpins rede, float J, float H, float beta);
     float magnetizacao(RedeSpins rede);
     RedeSpins passoMontecarlo(float *energia, RedeSpins rede, float J, float H, float beta);
+    float magnetizacao_absoluta(RedeSpins rede);
+    float magnetizacao_quadrado(RedeSpins rede);
 };
 
 #include "ModeloIsing.cpp"

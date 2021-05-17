@@ -13,4 +13,6 @@ modalidades = (evolucaSistema, variacaoCampo, variacaoTemperatura)
 for mod in modalidades:
     mkdir(f"{mod}/imagens")
     mkdir(f"{mod}/csv")
+    mkdir(f"{mod}/gifs")
+    mkdir(f"{mod}/graficos")
 

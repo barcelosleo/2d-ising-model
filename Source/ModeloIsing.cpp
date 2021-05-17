@@ -33,6 +33,33 @@ float Bidimensional::magnetizacao(Bidimensional::RedeSpins rede) {
     return mag;
 }
 
+float Bidimensional::magnetizacao_absoluta(Bidimensional::RedeSpins rede) {
+    float mag = 0;
+    int N = rede.size(), M = rede[0].size();
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            mag += abs(rede[i][j]);
+        }
+    }
+
+    return mag;
+}
+
+
+float Bidimensional::magnetizacao_quadrado(Bidimensional::RedeSpins rede) {
+    float mag = 0;
+    int N = rede.size(), M = rede[0].size();
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            mag += rede[i][j] * rede[i][j];
+        }
+    }
+
+    return mag;
+}
+
 RedeSpins Bidimensional::passoMontecarlo(float *energia, Bidimensional::RedeSpins rede, float J, float H, float beta) {
     float dE;
     int i, j, vizinhos, N = rede.size(), M = rede[0].size();
